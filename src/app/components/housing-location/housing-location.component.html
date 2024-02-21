@@ -1,3 +1,9 @@
-<section class="flex justify-center max-w-screen-xl m-auto">
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<section class="listing overflow-hidden rounded-[10px]">
+  <div class="relative h-[200px]">
+  <img class="absolute top-0 left-0 w-[100%] h-[100%] object-cover" [src]="housing_location.photo" alt="Exterior photo of {{housing_location.name}}">
+  </div>
+  <div class="p-4 bg-violet-50">
+    <h2 class="mb-3 text-violet-900 font-bold">{{ housing_location.name }}</h2>
+    <p class="listing-location">{{ housing_location.city}}, {{housing_location.state }}</p>
+  </div>
 </section>
