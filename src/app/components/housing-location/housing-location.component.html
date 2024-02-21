@@ -1,9 +1,11 @@
 <section class="listing overflow-hidden rounded-[10px]">
   <div class="relative h-[200px]">
-  <img class="absolute top-0 left-0 w-[100%] h-[100%] object-cover" [src]="housing_location.photo" alt="Exterior photo of {{housing_location.name}}">
+    <img class="absolute top-0 left-0 w-[100%] h-[100%] object-cover" [src]="housing_location.photo"
+      alt="Exterior photo of {{housing_location.name}}">
   </div>
   <div class="p-4 bg-violet-50">
     <h2 class="mb-3 text-violet-900 font-bold">{{ housing_location.name }}</h2>
-    <p class="listing-location">{{ housing_location.city}}, {{housing_location.state }}</p>
+    <p class="mb-3 listing-location">{{ housing_location.city}}, {{housing_location.state }}</p>
+    <a class="btn" [routerLink]="['/details', housing_location.id]">Learn More</a>
   </div>
 </section>

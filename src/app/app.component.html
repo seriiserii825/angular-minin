@@ -1,2 +1,9 @@
 <h2 class="py-3 mb-4 font-bold text-center">Angular</h2>
-<app-home></app-home>
+<main>
+  <div class="flex justify-center mb-5">
+  <a class=" border-2 py-2 px-4 rounded-[5px] border-violet-300 text-white bg-violet-400 hover:bg-violet-600 transition-all" [routerLink]="['/']">Go home</a>
+  </div>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</main>

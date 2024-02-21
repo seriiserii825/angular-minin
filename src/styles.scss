@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  color: white;
+  background: rgb(167, 139, 250);
+  border-radius: 5px;
+  transition: all .4s;
+  &:hover {
+    background: rgba(167, 139, 250, .8);
+  }
+}
