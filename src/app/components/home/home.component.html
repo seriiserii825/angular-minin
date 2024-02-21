@@ -1,10 +1,10 @@
 <section>
   <form class="flex justify-center mb-5">
-    <input class="border-2 indent-2 border-blue-100" type="text" placeholder="Filter by city">
-    <button class="p-2 border-2 bg-blue-200" type="button">Search</button>
+    <input class="border-2 indent-2 border-blue-100" type="text" placeholder="Filter by city" #filter>
+    <button (click)="filterResults(filter.value)" class="p-2 border-2 bg-blue-200" type="button">Search</button>
   </form>
   <div class="m-auto grid grid-cols-3 gap-4 max-w-[960px]">
-    <app-housing-location *ngFor="let housing_location of housing_location_list" [housing_location]="housing_location">
+    <app-housing-location *ngFor="let housing_location of filtered_location_list" [housing_location]="housing_location">
     </app-housing-location>
   </div>
 </section>

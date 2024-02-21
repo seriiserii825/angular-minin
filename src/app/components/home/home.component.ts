@@ -15,7 +15,20 @@ export class HomeComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
   housing_location_list: Ihosinglocation[] = [];
   housingService: HousingService = inject(HousingService);
+  filtered_location_list: Ihosinglocation[] = [];
   constructor() {
     this.housing_location_list = this.housingService.getAllHousingLocations();
+    this.filtered_location_list = this.housing_location_list;
+  }
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filtered_location_list = this.housing_location_list;
+      return;
+    }
+
+    this.filtered_location_list = this.housing_location_list.filter(
+      housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+    );
   }
 }
