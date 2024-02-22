@@ -18,6 +18,10 @@ export class MenuComponent {
     {
       path: 'products',
       title: 'Products'
+    },
+    {
+      path: 'heroes',
+      title: 'Heroes'
     }
   ]
 }

@@ -2,6 +2,7 @@ import {Routes, RouterLink} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {DetailsComponent} from './components/details/details.component';
 import {ProductsComponent} from './components/products/products.component';
+import {HeroesComponent} from './components/heroes/heroes.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,11 @@ export const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
-    title: 'Product page'
+    title: 'Products'
+  },
+  {
+    path: 'heroes',
+    component: HeroesComponent,
+    title: 'Heroes'
   },
 ];
