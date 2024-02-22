@@ -1,8 +1,5 @@
 <div class="container m-auto">
-  <div *ngIf="selected_hero">
-    <label for="name">Hero name: {{selected_hero.name}} </label>
-    <input id="name" [(ngModel)]="selected_hero.name" placeholder="name">
-  </div>
+  <app-hero-detail [hero]="selected_hero"></app-hero-detail>
   <ul class="heroes">
     <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
       <button type="button" [class.selected]="hero === selected_hero">
