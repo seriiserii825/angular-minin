@@ -1,0 +1,5 @@
+<ul class="flex mb-5">
+  <li *ngFor="let menu_item of menu_list">
+    <a class="btn mx-2 block" [routerLink]="[menu_item.path]">{{menu_item.title}}</a>
+  </li>
+</ul>
