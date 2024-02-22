@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./app/components/heroes/heroes.component.scss";
 
 .btn {
   display: inline-flex;
